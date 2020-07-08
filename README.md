@@ -2,7 +2,7 @@
 
 This is a colab runnable version for AWS DeepComposer workshop. The notebook and files which were modified are inside [Lab 2 folder](Lab%202). This modified version uses a google drive and copy all repository files into it using git clone command. Remember to create a "repos" folder or change the path at the [Lab 2 notebook](Lab%202/GAN.ipynb).
 
-As the notebook introdution explains, this worshop is a brief introduction to music generation using Generative Adversarial Networks (GANs). It´s a handson explanation from what AWS DeepComposer does.
+As the notebook introdution explains, this worshop is a brief introduction to music generation using Generative Adversarial Networks (GANs). It´s a explanation from what AWS DeepComposer does.
 
 
 ## [Lab 1: Compose music with DeepComposer models](Lab%201)
