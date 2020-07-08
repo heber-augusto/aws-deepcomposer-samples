@@ -21,7 +21,8 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import moviepy.editor as mpy
 import music21
-from IPython.display import Video
+from IPython.display import HTML
+from base64 import b64encode
 from IPython import display
 import seaborn as sns
     
@@ -178,5 +179,16 @@ def make_training_video(folder_dir):
     frames = [mpy.ImageClip(f).set_duration(1) for f in files]  
     clip = mpy.concatenate_videoclips(frames, method="compose")
     clip.write_videofile("movie.mp4",fps=15) 
-    return Video("movie.mp4")
-    
+    mp4 = open('movie.mp4','rb').read()    
+    data_url = "data:video/mp4;base64," + b64encode(mp4).decode()
+    return HTML("""<video width=400 controls>
+                      <source src="%s" type="video/mp4">
+                </video>
+                """ % data_url)
+
+
+
+
+
+
+
